@@ -27,6 +27,20 @@ This repo was [inspired from this tutorial](http://204nocontent.me/i-coded-the-a
 + `ember server`
 +  Go to http://localhost:4200 in your browser
 
+## Workings of the application
+
+Here's a list of the main relevant files for this repo since ember-cli generates
+a lots that aren't directly modified for this app.
+
++  `app/router.js`
++  `app/routes/phones.js`
++  `app/routes/phone.js`
++  `app/controllers/phones.js`
++  `app/models/phone.js`
++  `app/view/phone.js`
++  `app/templates/phones.js`
++  `app/templates/phone.js`
+
 
 
 
