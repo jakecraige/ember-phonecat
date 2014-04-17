@@ -5,7 +5,7 @@
 <p>{{snippet}}</p>
 <ul class='phone-thumbs'>
   {{#each image in images}}
-    <img {{bind-attr src=image}} {{action "selectImage" image target="view"}}>
+    <img {{bind-attr src=image}} {{action "selectImage" image target="view"}} class="phone">
   {{/each}}
 </ul>
 <ul class='specs'>

@@ -1,7 +1,11 @@
 var PhoneView = Ember.View.extend({
+  didInsertElement: function() {
+    var firstImage = this.get('controller.model.images.firstObject');
+    this.set('selectedImage', firstImage);
+  },
   actions: {
-    selectImage: function(photo) {
-      this.set('selectedImage', photo);
+    selectImage: function(image) {
+      this.set('selectedImage', image);
     }
   }
 });
