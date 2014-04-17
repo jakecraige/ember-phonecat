@@ -1,11 +1,11 @@
 <div class='phone-images'>
-  <img {{bind-attr src=view.selectedImage}} class="phone">
+  <img {{bind-attr src=selectedImage}} class="phone">
 </div>
 <h1>{{name}}</h1>
 <p>{{snippet}}</p>
 <ul class='phone-thumbs'>
   {{#each image in images}}
-    <img {{bind-attr src=image}} {{action "selectImage" image target="view"}} class="phone">
+    <img {{bind-attr src=image}} {{action "selectImage" image}} class="phone">
   {{/each}}
 </ul>
 <ul class='specs'>

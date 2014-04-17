@@ -37,8 +37,8 @@ a lots that aren't directly modified for this app.
 +  `app/routes/phones.js`
 +  `app/routes/phone.js`
 +  `app/controllers/phones.js`
++  `app/controllers/phone.js`
 +  `app/models/phone.js`
-+  `app/view/phone.js`
 +  `app/templates/phones.js`
 +  `app/templates/phone.js`
 +  `app/helpers/boolean-checkmark.js`
