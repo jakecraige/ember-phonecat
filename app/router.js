@@ -4,6 +4,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('phones');
 });
 
 export default Router;

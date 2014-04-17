@@ -1,0 +1,33 @@
+<div class='container-fluid'>
+    <div class='row-fluid'>
+        <div class='span2 filter'>
+          Search:
+          {{input value=query class="query"}}
+          Sort by:
+          {{view Ember.Select
+            content=sortOptions
+            optionValuePath="content.value"
+            optionLabelPath="content.text"
+            class="sort"
+            value=sort
+            }}
+        </div>
+        <div class='span10'>
+          <ul class='phones'>
+            {{#each filteredPhones}}
+              <li>
+                {{#link-to 'phone' this class="thumb"}}
+                  <img {{bind-attr src=imageUrl}}>
+                {{/link-to}}
+
+                {{#link-to 'phone' this class="thumb"}}
+                  {{name}}
+                {{/link-to}}
+
+                <p>{{snippet}}</p>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+    </div>
+</div>
