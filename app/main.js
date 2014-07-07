@@ -1,5 +1,7 @@
 /* global requirejs, require */
 
+import Ember from 'ember';
+
 export default function bootApp(prefix, attributes) {
   var App                = require(prefix + '/app')['default'];
   var initializersRegExp = new RegExp(prefix + '/initializers');

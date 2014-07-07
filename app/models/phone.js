@@ -1,6 +1,7 @@
-import PhoneFixtures from 'ember-phonecat/models/phone-fixtures';
+import phoneFixtures from 'ember-phonecat/models/phone-fixtures';
+import DS from 'ember-data';
 
-var attr = DS.attr
+var attr = DS.attr;
 
 var Phone =  DS.Model.extend({
   age: attr(),
@@ -26,7 +27,7 @@ var Phone =  DS.Model.extend({
 });
 
 Phone.reopenClass({
-  FIXTURES: PhoneFixtures()
+  FIXTURES: phoneFixtures()
 });
 
 export default Phone;

@@ -1,3 +1,5 @@
+import Ember from 'ember';
+
 var PhoneController = Ember.ObjectController.extend({
  actions: {
     selectImage: function (image) {

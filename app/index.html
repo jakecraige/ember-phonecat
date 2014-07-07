@@ -7,18 +7,21 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script>
-      window.ENV = {{ENV}};
-      document.write('<base href="' + document.location.origin + ENV.rootURL + '" />');
-    </script>
+    {{BASE_TAG}}
 
     <link rel="stylesheet" href="assets/bootstrap.css">
-    <link rel="stylesheet" href="assets/app.css">
-    <script src="assets/app.js"></script>
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/ember-phonecat.css">
   </head>
-  <body id="main">
+  <body>
     <script>
-      window.EmberPhonecat = require('ember-phonecat/main')['default']('ember-phonecat');
+      window.EmberPhonecatENV = {{ENV}};
+      window.EmberENV = window.EmberPhonecatENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/ember-phonecat.js"></script>
+    <script>
+      window.EmberPhonecat = require('ember-phonecat/app')['default'].create(EmberPhonecatENV.APP);
     </script>
   </body>
 </html>

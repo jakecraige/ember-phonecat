@@ -1,4 +1,5 @@
-var get = Em.get;
+import Ember from 'ember';
+var get = Ember.get;
 
 var PhonesController = Ember.ArrayController.extend({
   sort: 'name',

@@ -7,17 +7,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script>
-      ENV = {{ENV}};
-      document.write('<base href="' + document.location.origin + ENV.rootURL + '" />');
-    </script>
+    {{BASE_TAG}}
 
-    <link rel="stylesheet" href="assets/app.css">
-    <link rel="stylesheet" href="assets/qunit.css">
-
-    <script src="assets/app.js"></script>
-    <script src="assets/tests.js"></script>
-
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/ember-phonecat.css">
+    <link rel="stylesheet" href="assets/test-vendor.css">
     <style>
       #ember-testing-container {
         position: absolute;
@@ -38,9 +32,18 @@
   <body>
     <div id="qunit"></div>
     <div id="qunit-fixture"></div>
+
+    <script>
+      window.EmberPhonecatENV = {{ENV}};
+      window.EmberENV = window.EmberPhonecatENV.EmberENV;
+    </script>
+    <script src="assets/test-vendor.js"></script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/ember-phonecat.js"></script>
+    <script src="testem.js"></script>
     <script>
       require('ember-phonecat/tests/test-helper');
-      require('ember-phonecat/tests/test-loader');
     </script>
+    <script src="assets/test-loader.js"></script>
   </body>
 </html>
